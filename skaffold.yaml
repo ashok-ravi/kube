@@ -4,7 +4,7 @@ metadata:
   name: kube
 build:
   artifacts:
-    - image: ghcr.io/ashok-ravi/kube
+    - image: https://github.com/ashok-ravi/kube
       jib:
         project: com.ar:kube
 deploy:
