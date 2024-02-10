@@ -1,0 +1,20 @@
+apiVersion: skaffold/v4beta9
+kind: Config
+metadata:
+  name: kube
+build:
+  artifacts:
+    - image: busybox
+      jib:
+        project: com.ar:kube
+    - image: nginx
+      buildpacks:
+        builder: gcr.io/buildpacks/builder:v1
+deploy:
+  helm:
+    releases:
+      - name: rest-service
+        chartPath: rest-service
+        valuesFiles:
+          - rest-service/values.yaml
+        version: 0.1.0
