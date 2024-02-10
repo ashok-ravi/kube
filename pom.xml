@@ -14,7 +14,7 @@
 	<name>kube</name>
 	<description>Kubernates project</description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -41,7 +41,7 @@
 				<version>3.4.0</version>
 				<configuration>
 					<from>
-						<image>openjdk:21</image>
+						<image>openjdk:17</image>
 					</from>
 				</configuration>
 			</plugin>

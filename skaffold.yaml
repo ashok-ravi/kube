@@ -4,12 +4,9 @@ metadata:
   name: kube
 build:
   artifacts:
-    - image: busybox
+    - image: gcr.io/ashok-ravi/kube
       jib:
         project: com.ar:kube
-    - image: nginx
-      buildpacks:
-        builder: gcr.io/buildpacks/builder:v1
 deploy:
   helm:
     releases:
