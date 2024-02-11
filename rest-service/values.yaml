@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: https://github.com/ashok-ravi/kube
+  repository: kube
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -73,8 +73,8 @@ resources: {}
 
 livenessProbe:
   httpGet:
-    path: /actuator/health/liveness
-    port: 8080
+    path: /actuator/health/
+    port: 8081
     initialDelaySeconds: 3
     periodSeconds: 3
 
